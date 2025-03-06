@@ -1,5 +1,6 @@
 package com.practicecrud.service.type;
 
+import com.practicecrud.model.DTO.TypeDTO;
 import com.practicecrud.model.Type;
 import com.practicecrud.repository.ITypeRepository;
 import com.practicecrud.service.ITypeService;
@@ -32,5 +33,10 @@ public class TypeService implements ITypeService {
     @Override
     public void remove(Long id) {
         typeRepository.deleteTypeById(id);
+    }
+
+    @Override
+    public Iterable<TypeDTO> getType() {
+        return typeRepository.getType();
     }
 }

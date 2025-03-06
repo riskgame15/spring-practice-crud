@@ -1,4 +1,8 @@
 package com.practicecrud.model.DTO;
 
-public class TypeDTO {
+public interface TypeDTO {
+    Integer getId();
+    String getName();
+    Integer getCount();
 }
+
