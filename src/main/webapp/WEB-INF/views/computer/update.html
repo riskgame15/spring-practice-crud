@@ -11,7 +11,7 @@
   </a>
 </p>
 <div id="form">
-  <form th:action="@{/computer/update/{id}(id=${customer.getId()})}" th:object="${computers}"
+  <form th:action="@{/computer/update/{id}(id=${computer.getId()})}" th:object="${computers}"
         method="POST" novalidate="novalidate">
     <div>
       <label for="code">Code</label>
@@ -28,7 +28,7 @@
     <div>
       <label for="computerType">computerType</label>
       <select id="computerType" th:field="*{computerType}">
-        <option th:each="t : ${types}" th:value="${t.id}" th:text="${t.name}"></option>
+        <option th:each="c : ${computerType}" th:value="${c.id}" th:text="${c.name}"></option>
       </select>
     </div>
     <input type="submit" value="Edit"/>

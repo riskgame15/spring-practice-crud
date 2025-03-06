@@ -24,8 +24,8 @@ public class ComputerService implements IComputerService {
     }
 
     @Override
-    public void save(Computer computer) {
-        computerRepository.save(computer);
+    public Computer save(Computer computer) {
+        return computerRepository.save(computer);
 
     }
 

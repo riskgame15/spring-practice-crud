@@ -20,9 +20,8 @@ public class TypeService implements ITypeService {
     }
 
     @Override
-    public void save(Type type) {
-        typeRepository.save(type);
-
+    public Type save(Type type) {
+        return typeRepository.save(type);
     }
 
     @Override
